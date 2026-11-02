@@ -3,6 +3,8 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	-webkit-user-select: none; /* Safari */
+	user-select: none;
 }
 
 body {
@@ -32,4 +34,9 @@ input {
 	text-align: center;
 	width: 100%;
 	font-size: clamp(50px, 10vw, 100px);
+}
+
+input:focus {
+	outline: none;
+	background-color: transparent;
 }
