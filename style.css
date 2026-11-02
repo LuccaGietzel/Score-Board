@@ -18,7 +18,7 @@ body {
 }
 
 .player {
-	margin: 0 5%;
+	width: min-content;
 	text-align: center;
 }
 
@@ -32,7 +32,7 @@ input {
 	color: hsl(222, 62%, 83%);
 	border: none;
 	text-align: center;
-	width: 100%;
+	width: 12ch;
 	font-size: 50px;
 	overflow: visible;
 }
