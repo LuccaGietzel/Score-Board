@@ -33,7 +33,7 @@ input {
 	border: none;
 	text-align: center;
 	width: 100%;
-	font-size: clamp(50px);
+	font-size: 50px;
 }
 
 input:focus {
