@@ -1,9 +1,12 @@
 const players = document.querySelectorAll(".player");
+const wrongBuzzer = new Audio("./Sound-Effects/WrongBuzzer.mp3")
+const correctBuzzer = new Audio("./Sound-Effects/CorrectBuzzer.mp3")
 
 names = Array.from(players, (player) => player.children[0]);
-
 names.forEach((name) => {
 	name.addEventListener("click", (event) => {
+		wrongBuzzer.currentTime = 1.4;
+		wrongBuzzer.play().catch(error => console.error("Playback failed:", error));
 		event.target.nextElementSibling.textContent =
 			Number(event.target.nextElementSibling.textContent) - 100;
 	});
@@ -25,6 +28,8 @@ scores = Array.from(players, (player) => player.children[1]);
 
 scores.forEach((score) => {
 	score.addEventListener("click", (event) => {
+		correctBuzzer.currentTime = 1;
+		correctBuzzer.play().catch(error => console.error("Playback failed:", error));
 		event.target.textContent = Number(event.target.textContent) + 100;
 	});
 });
